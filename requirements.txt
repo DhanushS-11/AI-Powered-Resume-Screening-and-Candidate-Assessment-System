@@ -2,3 +2,7 @@ streamlit
 scikit-learn
 pdfplumber
 nltk
+fastapi
+uvicorn
+python-multipart
+requests
