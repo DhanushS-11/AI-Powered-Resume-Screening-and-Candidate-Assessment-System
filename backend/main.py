@@ -70,7 +70,8 @@ async def analyze_resume(
         jd_clean = preprocess(job_description)
         
         # 3. Extract Skills
-        skills = load_skills("data/skills.txt")
+        skills_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "skills.txt")
+        skills = load_skills(skills_path)
         resume_skills = extract_skills(resume_clean, skills)
         jd_skills = extract_skills(jd_clean, skills)
         

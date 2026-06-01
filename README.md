@@ -116,7 +116,6 @@ The AI evaluates each candidate and assigns one of five fit categories:
 | [Uvicorn](https://www.uvicorn.org/) | ASGI server with hot-reload for development |
 | [pdfplumber](https://github.com/jsvine/pdfplumber) | Reliable PDF text extraction |
 | [NLTK](https://www.nltk.org/) | Natural Language Toolkit for text preprocessing |
-| [scikit-learn](https://scikit-learn.org/) | Machine learning utilities (TF-IDF similarity) |
 
 ### AI Engine
 | Technology | Purpose |
@@ -259,7 +258,6 @@ ResumeScreener/
 │
 ├── 📄 README.md                    # You are here
 ├── 📄 requirements.txt             # Python dependencies
-├── 📄 app.py                       # Legacy Streamlit app (deprecated)
 │
 ├── 🔧 backend/                     # FastAPI Backend Server
 │   ├── main.py                     # API endpoints, CORS, request handling
@@ -269,8 +267,7 @@ ResumeScreener/
 │       ├── extract_text.py         # PDF → plain text (pdfplumber)
 │       ├── preprocess.py           # Text normalization (lowercase, regex cleanup)
 │       ├── skill_extractor.py      # Keyword-based skill matching engine
-│       ├── resume_summary.py       # Ollama LLM prompt template & API call
-│       └── similarity.py           # TF-IDF cosine similarity (legacy utility)
+│       └── resume_summary.py       # Ollama LLM prompt template & API call
 │
 ├── 🎨 frontend/                    # Next.js Frontend Application
 │   ├── package.json                # Node.js dependencies & scripts
@@ -290,11 +287,7 @@ ResumeScreener/
 │           ├── ScoreGauge.tsx      # Animated SVG radial score gauge
 │           └── MarkdownRenderer.tsx # LLM response parser with card-based layout
 │
-├── 📁 data/
-│   └── skills.txt                  # Root-level skills reference
-│
-├── 📁 uploads/                     # Temporary PDF storage (auto-cleaned)
-└── 📁 utils/                       # Root-level utility modules (legacy)
+└── 📁 uploads/                     # Temporary PDF storage (auto-cleaned)
 ```
 
 ---
