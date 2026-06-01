@@ -66,16 +66,16 @@ The AI evaluates each candidate and assigns one of five fit categories:
 ┌─────────────────────────────────────────────────────────┐
 │                    CLIENT (Browser)                     │
 │  ┌───────────────────────────────────────────────────┐  │
-│  │         Next.js 16 + TailwindCSS 4               │  │
+│  │         Next.js 16 + TailwindCSS 4                │  │
 │  │  ┌────────────┬──────────────┬───────────────┐    │  │
 │  │  │ Dashboard  │ ScoreGauge   │ Markdown      │    │  │
 │  │  │ .tsx       │ .tsx         │ Renderer.tsx  │    │  │
 │  │  └──────┬─────┴──────────────┴───────────────┘    │  │
 │  └─────────┼─────────────────────────────────────────┘  │
-│            │ POST /api/analyze (FormData)                │
+│            │ POST /api/analyze (FormData)               │
 │            ▼                                            │
 ├─────────────────────────────────────────────────────────┤
-│                    SERVER (FastAPI)                      │
+│                    SERVER (FastAPI)                     │
 │  ┌───────────────────────────────────────────────────┐  │
 │  │  main.py — CORS, Upload Handling, Response JSON   │  │
 │  │  ┌───────────────────────────────────────────┐    │  │
@@ -86,13 +86,13 @@ The AI evaluates each candidate and assigns one of five fit categories:
 │  │  │  └── resume_summary.py (Ollama prompt)    │    │  │
 │  │  └───────────────────────────────────────────┘    │  │
 │  └──────────────────────┬────────────────────────────┘  │
-│                         │ POST /api/generate             │
-│                         ▼                                │
-│              ┌─────────────────────┐                     │
-│              │  Ollama (Local LLM) │                     │
-│              │  qwen2.5:3b         │                     │
-│              │  localhost:11434     │                     │
-│              └─────────────────────┘                     │
+│                         │ POST /api/generate            │
+│                         ▼                               │
+│              ┌─────────────────────┐                    │
+│              │  Ollama (Local LLM) │                    │
+│              │  qwen2.5:3b         │                    │
+│              │  localhost:11434    │                    │
+│              └─────────────────────┘                    │
 └─────────────────────────────────────────────────────────┘
 ```
 
